@@ -8,56 +8,71 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <style>
+      .nav-link:hover {
+        background-color: #198754;
+        color: #fff !important;
+        border-radius: 5px;
+      }
+    </style>
   </head>
   <body class="bg-light">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <nav class="navbar navbar-expand-lg bg-white border-bottom py-4">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Pakistan Railways</a>
+        <a class="navbar-brand text-success fs-3 fw-bold" href="#">Pakistan Railways</a>
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link text-success" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Train Timings</a>
+              <a class="nav-link text-success" href="train_timings.html">Train Timings</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">News</a>
+              <a class="nav-link text-success" href="ticket_booking.html">Book Tickets</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Tenders</a>
+              <a class="nav-link text-success" href="scheduling.html">Scheduling</a>
             </li>
           </ul>
           <div class="d-flex">
-            <a href="login.html" class="btn btn-outline-light me-2">Login</a>
-            <a href="register.html" class="btn btn-warning">Register</a>
+            <a href="login.html" class="btn btn-success me-2">Login</a>
+            <a href="register.html" class="btn btn-success">Register</a>
           </div>
         </div>
       </div>
     </nav>
+
+    <!-- Heading Below Navbar -->
+    <div class="container-fluid bg-white py-3 text-center">
+      <h1 class="text-success">Welcome to Pakistan Railways</h1>
+    </div>
 
     <!-- Hero Section -->
     <div class="container-fluid p-0">
       <div class="position-relative w-100" style="height: 60vh;">
         <img
           src="landing_image.png"
-          class="w-100 h-100 position-absolute top-0 start-0 object-fit-cover"
+          class="w-100 h-100 position-absolute top-0 start-0"
+          style="object-fit: cover;"
           alt="Pakistan Railways"
         />
         <div
           class="position-absolute top-50 start-50 translate-middle text-center"
         >
-          <h1 class="text-success">Welcome to Pakistan Railways</h1>
-          <p class="lead text-success">
+          <p class="lead text-success bg-white bg-opacity-75 px-3 py-2 rounded">
             Book your journey, check train timings, and stay updated with the
             latest news.
           </p>
@@ -65,13 +80,70 @@
       </div>
     </div>
 
+    <!-- Services Section -->
     <div class="container py-5 text-center">
-      <h2>Get Started</h2>
-      <p>
-        Explore our services to plan and book your next railway journey with
-        ease.
-      </p>
+      <h2 class="text-success">Our Services</h2>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title text-success">Check Timings</h5>
+              <p class="card-text">Get the latest train schedule and plan your journey accordingly.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title text-success">Book Tickets</h5>
+              <p class="card-text">Easily book train tickets with our online reservation system.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title text-success">Latest News</h5>
+              <p class="card-text">Stay informed with the latest updates and announcements.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="bg-white text-center text-lg-start border-top mt-5">
+      <div class="container p-4">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-success">Pakistan Railways</h5>
+            <p>
+              Your trusted partner for safe and efficient railway transportation across the country.
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-success">Quick Links</h5>
+            <ul class="list-unstyled mb-0">
+              <li><a href="#" class="text-decoration-none text-success">Home</a></li>
+              <li><a href="#" class="text-decoration-none text-success">Train Timings</a></li>
+              <li><a href="#" class="text-decoration-none text-success">Book Tickets</a></li>
+              <li><a href="#" class="text-decoration-none text-success">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-success">Contact Us</h5>
+            <ul class="list-unstyled">
+              <li class="text-success">Phone: +92 123 4567890</li>
+              <li class="text-success">Email: info@pakrail.gov.pk</li>
+              <li class="text-success">Address: Lahore, Pakistan</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="text-center p-3 bg-success text-white">
+        © 2025 Pakistan Railways. All rights reserved.
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
