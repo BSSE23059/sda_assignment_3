@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakistan Railways | Sign In</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #046A38; /* Pakistan Railways Green */
+            --secondary-color: #01411C; /* Darker green */
+            --accent-color: #FFD700; /* Gold accent */
+            --dark-color: #1a1a2e;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .auth-container {
+            max-width: 450px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .auth-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .auth-header h2 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .auth-header p {
+            color: #6c757d;
+            font-size: 0.95rem;
+        }
+        
+        .form-control {
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(4, 106, 56, 0.15);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(4, 106, 56, 0.3);
+            background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+        }
+        
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 25px 0;
+            color: #adb5bd;
+        }
+        
+        .divider::before, .divider::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .divider-text {
+            padding: 0 10px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .social-btn i {
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .btn-google {
+            background-color: #fff;
+            color: #757575;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .btn-google:hover {
+            background-color: #f8f9fa;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-apple {
+            background-color: #000;
+            color: #fff;
+        }
+        
+        .btn-apple:hover {
+            background-color: #333;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-facebook {
+            background-color: #1877f2;
+            color: #fff;
+        }
+        
+        .btn-facebook:hover {
+            background-color: #166fe5;
+            box-shadow: 0 2px 5px rgba(24, 119, 242, 0.3);
+        }
+        
+        .btn-wechat {
+            background-color: #07c160;
+            color: #fff;
+        }
+        
+        .btn-wechat:hover {
+            background-color: #06ad56;
+            box-shadow: 0 2px 5px rgba(7, 193, 96, 0.3);
+        }
+        
+        .switch-auth {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.95rem;
+        }
+        
+        .switch-auth a {
+            color: var(--primary-color);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .switch-auth a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+        
+        .forgot-password {
+            text-align: right;
+            margin-top: -10px;
+            margin-bottom: 15px;
+        }
+        
+        .forgot-password a {
+            color: var(--primary-color);
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .forgot-password a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+        
+        .terms {
+            font-size: 0.75rem;
+            color: #6c757d;
+            text-align: center;
+            margin-top: 25px;
+            line-height: 1.5;
+        }
+        
+        .terms a {
+            color: var(--dark-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .terms a:hover {
+            text-decoration: underline;
+        }
+        
+        .pakrail-header {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="auth-container">
+            <div class="pakrail-header">Pakistan Railways</div>
+            
+            <div class="auth-header">
+                <h2>Welcome Back</h2>
+                <p>Sign in to manage your bookings and access member benefits</p>
+            </div>
+            
+            <form>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                </div>
+                
+                <div class="forgot-password">
+                    <a href="#">Forgot password?</a>
+                </div>
+                
+                <button type="submit" class="btn btn-primary w-100 mb-3">Sign In</button>
+                
+                <div class="switch-auth">
+                    New to Pakistan Railways? <a href="register.html">Create an account</a>
+                </div>
+            </form>
+            
+            <div class="divider">
+                <span class="divider-text">Or continue with</span>
+            </div>
+            
+            <div class="social-login">
+                <a href="#" class="social-btn btn-google">
+                    <i class="fab fa-google"></i> Google
+                </a>
+                <a href="#" class="social-btn btn-apple">
+                    <i class="fab fa-apple"></i> Apple
+                </a>
+                <a href="#" class="social-btn btn-facebook">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="#" class="social-btn btn-wechat">
+                    <i class="fab fa-weixin"></i> WeChat
+                </a>
+            </div>
+            
+            <div class="terms">
+                By signing in, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>, 
+                including <a href="#">Cookie Use</a>.
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
